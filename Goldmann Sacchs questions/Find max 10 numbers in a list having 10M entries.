@@ -1,0 +1,8 @@
+array={...the billion numbers...} 
+result[10];
+
+pivot=QuickSelect(array,billion-11);//O(N)
+
+for(i=0;i<billion;i++)//O(N)
+   if(array[i]>=pivot)
+      result.add(array[i]);
