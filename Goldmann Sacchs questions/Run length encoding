@@ -1,0 +1,23 @@
+Link- https://practice.geeksforgeeks.org/problems/run-length-encoding/1/
+
+string encode(string src)
+{     
+  //Your code here 
+  int n=src.length();
+  string s;
+  for (int i = 0; i < n; i++) {
+ 
+        
+        int count = 1;
+        while (i < n - 1 && src[i] == src[i + 1]) {
+            count++;
+            i++;
+        }
+ 
+        
+       s.push_back(src[i]);
+       s.push_back('0'+count);
+       
+  }
+  return s;
+}     
