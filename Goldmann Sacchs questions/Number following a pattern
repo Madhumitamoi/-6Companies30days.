@@ -1,0 +1,31 @@
+Link- https://practice.geeksforgeeks.org/problems/number-following-a-pattern3126/1
+
+string printMinNumberForPattern(string S){
+        // code here 
+        string result;
+ 
+   
+    stack<int> stk;
+ 
+    
+    for (int i = 0; i <= S.length(); i++)
+    {
+        
+        stk.push(i + 1);
+ 
+        
+        if (i == S.length() || S[i] == 'I')
+        {
+            
+            while (!stk.empty())
+            {
+                
+                result += to_string(stk.top());
+                
+                stk.pop();
+            }
+        }
+    }
+   return result;
+    }
+};
